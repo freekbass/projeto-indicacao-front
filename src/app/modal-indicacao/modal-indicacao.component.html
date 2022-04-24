@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+</div>
+<form [formGroup]="indicacaoForm" (ngSubmit)="onSubmit()">
+  <input type="hidden" class="form-control" formControlName="id" name="id" />
+  <div class="modal-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <label>Nome</label>
+          <input type="text" class="form-control" formControlName="nome" name="nome" />
+        </div>
+        <div class="col-md-12">
+          <label>CPF</label>
+          <input type="text" class="form-control" formControlName="cpf" name="cpf" />
+        </div>
+        <div class="col-md-12">
+          <label>Email</label>
+          <input type="text" class="form-control" formControlName="email" name="email" />
+        </div>
+        <div class="col-md-12">
+          <label>Telefone</label>
+          <input type="text" class="form-control" formControlName="telefone" name="telefone" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Save changes</button>
+  </div>
+</form>
